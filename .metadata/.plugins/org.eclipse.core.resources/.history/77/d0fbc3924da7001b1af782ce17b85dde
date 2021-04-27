@@ -1,0 +1,5 @@
+package com.pushbullet.models;
+
+public class UserModel {
+
+}
