@@ -14,6 +14,7 @@ public class AccountsService {
 	
 private  List<UserModel> listOfUsers = new ArrayList<UserModel>();
 	
+	
 	public Boolean createUser(RegisterUserModel registerUserModel) {
 			
 		UserModel user = new UserModel(
@@ -27,10 +28,6 @@ private  List<UserModel> listOfUsers = new ArrayList<UserModel>();
 			return true;
 		}
 		throw new DuplicateUserException("User " + registerUserModel.getUserName() + " already exists");
-	}
-	
-	public List<UserModel> getAllUsers() {
-		return this.listOfUsers;
 	}
 
 }
