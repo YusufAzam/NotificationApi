@@ -30,7 +30,23 @@ private  List<UserModel> listOfUsers = new ArrayList<UserModel>();
 	}
 	
 	public List<UserModel> getAllUsers() {
-		return this.listOfUsers;
+		return listOfUsers;
 	}
-
+	
+	public UserModel getUser(String userName) {
+		for(UserModel userModel: this.listOfUsers) {
+			 if(userModel.getUsername().equals(userName)) {
+				 return userModel;
+			 }
+		 }
+		return null;
+	}
+	
+	public void increment(String userName) {
+		this.listOfUsers.forEach(user -> {
+			if(user.getUsername().equals(userName)) {
+				user.incrementNumOfNotificationsPushed();
+			}
+		});
+	}
 }

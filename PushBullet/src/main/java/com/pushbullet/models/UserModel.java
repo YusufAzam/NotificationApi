@@ -18,4 +18,8 @@ public class UserModel {
 	private String creationTime;
 	private Integer numOfNotificationsPushed;
 	
+	public void incrementNumOfNotificationsPushed() {
+		this.numOfNotificationsPushed = this.numOfNotificationsPushed + 1;
+	}
+	
 }
