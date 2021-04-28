@@ -19,7 +19,7 @@ public class UserModel {
 	private Integer numOfNotificationsPushed;
 	
 	public void incrementNumOfNotificationsPushed() {
-		this.numOfNotificationsPushed = this.numOfNotificationsPushed + 1;
+		this.numOfNotificationsPushed++;
 	}
 	
 }
